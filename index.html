@@ -3,190 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac Lockhart</title>
+    <title>Days Since A Dance with Dragons</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --background-color: #f8f9fa;
-        }
-        
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-        }
-
-        nav {
-            background-color: var(--primary-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
+            height: 100vh;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            align-items: center;
+            background-color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        .hero {
+        
+        .counter {
+            font-size: 8vw;
+            color: #333;
             text-align: center;
-            padding: 4rem 0;
         }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
+        
+        .label {
+            font-size: 2vw;
             color: #666;
-            max-width: 600px;
-            margin: 0 auto;
+            margin-top: 20px;
         }
 
-        section {
-            padding: 4rem 0;
+        .corner-link {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1vw;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
+        .corner-link:hover {
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div>
+        <div class="counter" id="dayCount"></div>
+        <div class="label">days since A Dance with Dragons was released</div>
+    </div>
+    <a href="sanderson.html" class="corner-link">Meanwhile, Sanderson...</a>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Mac Lockhart</h1>
-                <p>Welcome to my personal website</p>
-            </div>
-        </section>
+    <script>
+        function calculateDays() {
+            const releaseDate = new Date('2011-07-12');
+            const today = new Date();
+            const diffTime = Math.abs(today - releaseDate);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById('dayCount').textContent = diffDays.toLocaleString();
+        }
 
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="card">
-                    <p>Add your personal bio and information here.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Project 1</h3>
-                        <p>Project description goes here.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Project 2</h3>
-                        <p>Project description goes here.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Project 3</h3>
-                        <p>Project description goes here.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="card">
-                    <p>Add your contact information and social media links here.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Mac Lockhart. All rights reserved.</p>
-        </div>
-    </footer>
+        calculateDays();
+        // Update every day
+        setInterval(calculateDays, 86400000);
+    </script>
 </body>
 </html> 
