@@ -36,12 +36,70 @@
         .back-link:hover {
             color: #333;
         }
+
+        .loading {
+            font-size: 2vw;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="message">
-        Since then, Brandon Sanderson has written 20 books
+        <div id="bookCount">Loading book count...</div>
     </div>
     <a href="index.html" class="back-link">← Back</a>
+
+    <script>
+        async function getBookCount() {
+            try {
+                // Wikipedia API endpoint
+                const url = 'https://en.wikipedia.org/w/api.php?' +
+                    'action=parse&format=json&origin=*&prop=text&' +
+                    'page=Brandon_Sanderson_bibliography';
+
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                // Create a temporary element to parse the HTML content
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data.parse.text['*'];
+
+                // Get all table rows from the parsed content
+                const rows = tempDiv.getElementsByTagName('tr');
+                
+                let bookCount = 0;
+                const currentYear = new Date().getFullYear();
+                
+                // Process each row
+                Array.from(rows).forEach(row => {
+                    const cells = row.getElementsByTagName('td');
+                    if (cells.length >= 2) {
+                        const yearCell = cells[1]?.textContent;
+                        if (yearCell) {
+                            const year = parseInt(yearCell.trim());
+                            if (year >= 2011 && year <= currentYear) {
+                                bookCount++;
+                            }
+                        }
+                    }
+                });
+
+                // Update the display
+                document.getElementById('bookCount').innerHTML = 
+                    `Since 2011, Brandon Sanderson has written ${bookCount} books`;
+
+            } catch (error) {
+                document.getElementById('bookCount').innerHTML = 
+                    'Unable to fetch book count. Please try again later.';
+                console.error('Error:', error);
+            }
+        }
+
+        // Call the function when the page loads
+        getBookCount();
+
+        // Refresh the count every hour
+        setInterval(getBookCount, 3600000);
+    </script>
 </body>
 </html> 
