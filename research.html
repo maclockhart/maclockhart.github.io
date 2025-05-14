@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Lockhart - Research</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .publication {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .publication .meta {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .links {
+            margin-top: 1rem;
+        }
+
+        .links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .media {
+            margin-top: 0.5rem;
+            color: #666;
+        }
+
+        .award {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="CV_Current.pdf">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="publications">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <div class="card">
+                    <div class="publication">
+                        <h3>Abortion Policy Preferences are Structured, Stable, and Consequential</h3>
+                        <div class="meta">with Natalie Hernandez, Alan Gerber, and Gregory Huber</div>
+                        <p>Conditionally Accepted at the <em>American Journal of Political Science</em></p>
+                        <div class="links">
+                            <a href="#">Latest Version (August 2024)</a>
+                        </div>
+                    </div>
+
+                    <div class="publication">
+                        <h3>Can official messaging on trust in elections break through partisan polarization?</h3>
+                        <div class="meta">with Jen Gaudette, Thad Kousser, Seth Hill, and Mindy Romero (2025)</div>
+                        <p><em>British Journal of Political Science</em></p>
+                        <div class="links">
+                            <a href="#">Published Paper (Open Access)</a>
+                            <a href="#">Replication Archive</a>
+                        </div>
+                    </div>
+
+                    <div class="publication">
+                        <h3>Voters distrust delayed election results, but a prebunking message inoculates against distrust</h3>
+                        <div class="meta">with Jen Gaudette, Thad Kousser, Seth Hill, Mindy Romero, and Laura Uribe (2024)</div>
+                        <p><em>PNAS Nexus</em></p>
+                        <div class="media">
+                            Media: UCSD Press Release, CBS 8 Appearance, New Haven Register article, Slate article, San Diego Union Tribune
+                        </div>
+                        <div class="links">
+                            <a href="#">Published Paper (Open Access)</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more publications following the same pattern -->
+                </div>
+            </div>
+        </section>
+
+        <section id="working-papers">
+            <div class="container">
+                <h2 class="section-title">Working Papers</h2>
+                <div class="card">
+                    <h3>Primary Elections</h3>
+                    
+                    <div class="publication">
+                        <h3>Information and Political Representation: Evidence from the impact of declining local news on primary elections</h3>
+                        <div class="award">Winner of the Leon Weaver Award for best paper presented in the Representation & Electoral Systems section at the 2021 APSA meetings</div>
+                        <div class="links">
+                            <a href="#">Latest Version (September 1, 2024)</a>
+                        </div>
+                    </div>
+
+                    <div class="publication">
+                        <h3>Race, Policy Responsiveness, and Dyadic Representation in U.S. Lawmaking</h3>
+                        <div class="meta">with Agustin Markarian, Jacob Hacker, and Zoltan Hajnal</div>
+                        <p>Revise & Resubmit at the <em>American Political Science Review</em></p>
+                        <div class="links">
+                            <a href="#">Latest Version (May 2024)</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more working papers following the same pattern -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mac Lockhart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
