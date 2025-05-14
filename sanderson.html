@@ -52,37 +52,33 @@
     <script>
         async function getBookCount() {
             try {
-                // Wikipedia API endpoint
+                // Use the MediaWiki API to get the raw wikitext
                 const url = 'https://en.wikipedia.org/w/api.php?' +
-                    'action=parse&format=json&origin=*&prop=text&' +
-                    'page=Brandon_Sanderson_bibliography';
+                    'action=query&format=json&origin=*&prop=revisions&titles=Brandon_Sanderson_bibliography&' +
+                    'rvprop=content&rvslots=main';
 
                 const response = await fetch(url);
                 const data = await response.json();
                 
-                // Create a temporary element to parse the HTML content
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = data.parse.text['*'];
-
-                // Get all table rows from the parsed content
-                const rows = tempDiv.getElementsByTagName('tr');
+                // Extract the page content
+                const pages = data.query.pages;
+                const pageId = Object.keys(pages)[0];
+                const content = pages[pageId].revisions[0].slots.main['*'];
                 
+                // Count books since 2011
                 let bookCount = 0;
                 const currentYear = new Date().getFullYear();
                 
-                // Process each row
-                Array.from(rows).forEach(row => {
-                    const cells = row.getElementsByTagName('td');
-                    if (cells.length >= 2) {
-                        const yearCell = cells[1]?.textContent;
-                        if (yearCell) {
-                            const year = parseInt(yearCell.trim());
-                            if (year >= 2011 && year <= currentYear) {
-                                bookCount++;
-                            }
-                        }
+                // Regular expression to match year entries in tables
+                const yearPattern = /\|\s*(20\d{2})\s*\|/g;
+                let match;
+                
+                while ((match = yearPattern.exec(content)) !== null) {
+                    const year = parseInt(match[1]);
+                    if (year >= 2011 && year <= currentYear) {
+                        bookCount++;
                     }
-                });
+                }
 
                 // Update the display
                 document.getElementById('bookCount').innerHTML = 
