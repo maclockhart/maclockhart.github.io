@@ -375,6 +375,7 @@ details.pub-title-details[open] > summary::after {
   color: var(--gray);
   line-height: 1.75;
   font-style: normal;
+  text-align: justify;
 }
 
 /* ── Footer ── */
