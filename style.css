@@ -66,7 +66,7 @@ nav ul li a.active {
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 60px 24px 80px;
+  padding: 36px 24px 56px;
 }
 
 /* ── Home page ── */
@@ -166,7 +166,7 @@ main {
   color: var(--gray);
   border-bottom: 1px solid var(--light-gray);
   padding-bottom: 8px;
-  margin: 28px 0 16px;
+  margin: 20px 0 10px;
 }
 
 .pub-list {
@@ -174,13 +174,8 @@ main {
 }
 
 .pub-item {
-  margin-bottom: 18px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--light-gray);
-}
-
-.pub-item:last-child {
-  border-bottom: none;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .pub-title {
