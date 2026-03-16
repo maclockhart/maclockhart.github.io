@@ -1,258 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac Lockhart - Research</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --background-color: #f8f9fa;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-        }
-
-        nav {
-            background-color: var(--primary-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-        }
-
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .publication {
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .publication:last-child {
-            border-bottom: none;
-        }
-
-        .publication h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .publication .meta {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .links {
-            margin-top: 1rem;
-        }
-
-        .links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin-right: 1rem;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .media {
-            margin-top: 0.5rem;
-            color: #666;
-        }
-
-        .award {
-            color: #e74c3c;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Mac Lockhart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="maclockhart.html">Home</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="maclockhart.html#contact">Contact</a></li>
-                    <li><a href="CV_Current.pdf">CV</a></li>
-                </ul>
-            </nav>
+
+  <nav>
+    <a class="site-title" href="index.html">Mac Lockhart</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="page-title">Research</p>
+
+    <!-- ── Publications ── -->
+    <h2 class="section-heading">Publications</h2>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Measuring the effects of campaign events: Specifying and comparing estimates of the effect of Trump's conviction</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alan Gerber, Greg Huber, &amp; Jack Walker<br>
+          <span class="journal">Political Science Research and Methods</span> (Conditionally Accepted, September 2025)
+        </p>
+        <div class="pub-links">
+          <a href="https://www.dropbox.com/scl/fi/y2jnqc2lk2fgfu27bq54j/trump_trial.pdf?rlkey=3xat8bpz5qwi877ppkle3lzow&dl=0" target="_blank">Latest Version</a>
         </div>
-    </header>
+      </li>
 
-    <main>
-        <section id="publications">
-            <div class="container">
-                <h2 class="section-title">Publications</h2>
-                <div class="card">
-                    <div class="publication">
-                        <h3>Abortion Policy Preferences are Structured, Stable, and Consequential</h3>
-                        <div class="meta">with Natalie Hernandez, Alan Gerber, and Gregory Huber</div>
-                        <p>Conditionally Accepted at the <em>American Journal of Political Science</em></p>
-                        <div class="links">
-                            <a href="https://maclockhart.com/s/AbortionAttitudes_paper.pdf">Latest Version (August 2024)</a>
-                        </div>
-                    </div>
-
-                    <div class="publication">
-                        <h3>Can official messaging on trust in elections break through partisan polarization?</h3>
-                        <div class="meta">with Jen Gaudette, Thad Kousser, Seth Hill, and Mindy Romero (2025)</div>
-                        <p><em>British Journal of Political Science</em></p>
-                        <div class="links">
-                            <a href="https://doi.org/10.1017/S0007123424000681">Published Paper (Open Access)</a>
-                            <a href="https://doi.org/10.7910/DVN/BWW9LQ">Replication Archive</a>
-                        </div>
-                    </div>
-
-                    <div class="publication">
-                        <h3>Voters distrust delayed election results, but a prebunking message inoculates against distrust</h3>
-                        <div class="meta">with Jen Gaudette, Thad Kousser, Seth Hill, Mindy Romero, and Laura Uribe (2024)</div>
-                        <p><em>PNAS Nexus</em></p>
-                        <div class="media">
-                            Media: <a href="https://today.ucsd.edu/story/election-officials-can-boost-voter-trust-in-delayed-results-with-early-communication">UCSD Press Release</a>, 
-                            <a href="https://www.cbs8.com/article/news/politics/elections/study-election-result-delays-lose-voter-trust/509-62abf341-47eb-4300-8dda-9c9c5e24ab5f">CBS 8 Appearance</a>, 
-                            <a href="https://www.nhregister.com/election/article/ct-trump-kamala-election-results-integrity-trust-19851370.php">New Haven Register article</a>, 
-                            <a href="https://slate.com/news-and-politics/2024/10/election-2024-trump-win-speech-danger.html?via=rss">Slate article</a>, 
-                            <a href="https://www.sandiegouniontribune.com/2024/10/30/theres-plenty-of-reasons-to-trust-election-results-but-too-many-people-still-dont/">San Diego Union Tribune</a>
-                        </div>
-                        <div class="links">
-                            <a href="https://doi.org/10.1093/pnasnexus/pgae414">Published Paper (Open Access)</a>
-                        </div>
-                    </div>
-                    <div class="publication">
-                        <h3>Affluence and the Demand for Policy Improvements: Exploring Elite Beliefs about Vulnerability to Societal Problems</h3>
-                        <div class="meta">w/ Eric Patashnik and Alan Gerber (2024)</div>
-                        <p><em>British Journal of Political Science</em></p>
-                        <div class="links">
-                            <a href="https://www.degruyter.com/document/doi/10.1515/for-2024-2007/html">Published Paper (Open Access)</a>
-                        </div>
-
-                    </div>
-                    <!-- Add more publications following the same pattern -->
-                </div>
-            </div>
-        </section>
-
-        <section id="working-papers">
-            <div class="container">
-                <h2 class="section-title">Working Papers</h2>
-                <div class="card">
-                    <h3>Primary Elections</h3>
-                    <br>
-                    <div class="publication">
-                        <h3>Information and Political Representation: Evidence from the impact of declining local news on primary elections</h3>
-                        <div class="award">Winner of the Leon Weaver Award for best paper presented in the Representation & Electoral Systems section at the 2021 APSA meetings</div>
-                        <div class="links">
-                            <a href="#">Latest Version (September 1, 2024)</a>
-                        </div>
-                    </div>
-                    <h3>Representation</h3>
-                    <br>
-                    <div class="publication">
-                        <h3>Race, Policy Responsiveness, and Dyadic Representation in U.S. Lawmaking</h3>
-                        <div class="meta">with Agustin Markarian, Jacob Hacker, and Zoltan Hajnal</div>
-                        <p>Revise & Resubmit at the <em>American Political Science Review</em></p>
-                        <div class="links">
-                            <a href="https://maclockhart.com/s/Race-Paper-Draft-Main-Text_Final-with-Cover-Page.pdf">Latest Version (May 2024)</a>
-                        </div>
-                    </div>
-                    <div class="publication">
-                        <h3>Policy Shapes Partisan Identification: How Dobbs made pre-existing abortion policy preferences relevant to partisanship </h3>
-                        <div class="meta">with Alan Gerber and Gregory Huber</div>
-                        <div class="links">
-                            <a href="https://huber.research.yale.edu/materials/116_paper.pdf">Latest Version (August 2024)</a>
-                        </div>
-                    </div>
-                    <div class="publication">
-                        <h3>I'm a Federal Sovereigntist but a Provincial Nationalist: Party Identification in a Multi-Level Westminster Democracy</h3>
-                        <div class="meta">with Alexandre Rivard</div>
-                        <div class="links">
-                            <a href=https://osf.io/preprints/osf/at69m_v2">Latest Version (April 2025)</a>
-                        </div>
-                    </div>
-                    <!-- Add more working papers following the same pattern -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mac Lockhart. All rights reserved.</p>
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How Research-Practice Partnerships Can Strengthen Experiments and Build Trust in American Elections</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Cheryl Boudreau, Jennifer Gaudette, Seth Hill, Thad Kousser, &amp; Laura Uribe<br>
+          <span class="journal">Politics and Governance</span> (Forthcoming)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.17645/pag.11692" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/JVGEAT" target="_blank">Replication Archive</a>
         </div>
-    </footer>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Race, Policy Responsiveness, and Representation in U.S. Lawmaking</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Agustin Markarian, Jacob Hacker, &amp; Zoltan Hajnal<br>
+          <span class="journal">American Political Science Review</span> (Forthcoming)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1017/S0003055425101287" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/ZJ1I0V" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Abortion Policy Preferences are Structured, Stable, and Consequential</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Natalie Hernandez, Alan Gerber, &amp; Gregory Huber<br>
+          <span class="journal">American Journal of Political Science</span> (Forthcoming, August 2024)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1111/ajps.70036" target="_blank">Published Version</a>
+          <a href="https://maclockhart.com/s/AbortionAttitudes_paper.pdf" target="_blank">Latest Version</a>
+          <a href="https://doi.org/10.7910/DVN/PVERG0" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Can official messaging on trust in elections break through partisan polarization?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Jen Gaudette, Thad Kousser, Seth Hill, &amp; Mindy Romero<br>
+          <span class="journal">British Journal of Political Science</span> (2025)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1017/S0007123424000681" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/BWW9LQ" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Voters distrust delayed election results, but a prebunking message inoculates against distrust</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Jen Gaudette, Thad Kousser, Seth Hill, Mindy Romero, &amp; Laura Uribe<br>
+          <span class="journal">PNAS Nexus</span> (2024)
+        </p>
+        <span class="pub-badge">Media:
+          <a href="https://today.ucsd.edu/story/election-officials-can-boost-voter-trust-in-delayed-results-with-early-communication" target="_blank" style="color:inherit;">UCSD Press Release</a> ·
+          <a href="https://www.cbs8.com/article/news/politics/elections/study-election-result-delays-lose-voter-trust/509-62abf341-47eb-4300-8dda-9c9c5e24ab5f" target="_blank" style="color:inherit;">CBS 8</a> ·
+          <a href="https://slate.com/news-and-politics/2024/10/election-2024-trump-win-speech-danger.html" target="_blank" style="color:inherit;">Slate</a> ·
+          <a href="https://www.nhregister.com/election/article/ct-trump-kamala-election-results-integrity-trust-19851370.php" target="_blank" style="color:inherit;">New Haven Register</a> ·
+          <a href="https://www.sandiegouniontribune.com/2024/10/30/theres-plenty-of-reasons-to-trust-election-results-but-too-many-people-still-dont/" target="_blank" style="color:inherit;">San Diego Union Tribune</a>
+        </span>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1093/pnasnexus/pgae414" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/XN7UHY" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Affluence and the Demand for Policy Improvements: Exploring Elite Beliefs about Vulnerability to Societal Problems</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Eric Patashnik &amp; Alan Gerber<br>
+          <span class="journal">The Forum</span> (2024)
+        </p>
+        <div class="pub-links">
+          <a href="https://www.degruyter.com/document/doi/10.1515/for-2024-2007/html" target="_blank">Published Version</a>
+          <a href="https://maclockhart.com/s/Gerber-et-al-2024.pdf" target="_blank">Ungated Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How Much Should We Trust Instrumental Variable Estimates in Political Science?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Apoorva Lal, Yiqing Xu, &amp; Ziwen (Gary) Zu<br>
+          <span class="journal">Political Analysis</span> (2024)
+        </p>
+        <span class="pub-badge">Political Analysis 2024 Editor's Choice</span>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1017/pan.2024.2" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/MM5THZ" target="_blank">Replication Archive</a>
+          <a href="https://yiqingxu.org/papers/english/2021_iv/Erratum.pdf" target="_blank">Erratum</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How Do General Election Incentives Affect the Visible and Invisible Primary?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Seth Hill<br>
+          <span class="journal">Legislative Studies Quarterly</span> (2023)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1111/lsq.12415" target="_blank">Published Version</a>
+          <a href="https://maclockhart.com/s/Lockhart-and-Hill-2023.pdf" target="_blank">Ungated Version</a>
+          <a href="https://doi.org/10.7910/DVN/0Z9RTA" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Emotional Reactions to COVID-19 Projections and Consequences for Protective Attitudes and Behavior</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Jennifer Merolla, Zoe Nemerever, Seth Hill, Thad Kousser, &amp; Mindy Romero<br>
+          <span class="journal">Political Psychology</span> (2023)
+        </p>
+        <span class="pub-badge">Media: <a href="https://www.washingtonpost.com/politics/2021/06/29/fears-not-enough-get-every-american-vaccinated-perhaps-chance-win-millions-will-work/" target="_blank" style="color:inherit;">Monkey Cage / Washington Post</a></span>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1111/pops.12876" target="_blank">Published Version</a>
+          <a href="https://maclockhart.com/s/Political-Psychology-2022-Merrolla-Emotional-Reactions-to-COVID19-Projections-and-Consequences-for-P.pdf" target="_blank">Ungated Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Can Addressing Integrity Concerns about Mail Balloting Increase Turnout?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Daniel Biggers, Elizabeth Mitchell Elder, Seth Hill, Thad Kousser, &amp; Gabriel Lenz<br>
+          <span class="journal">Journal of Experimental Political Science</span> (2023)
+        </p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1017/XPS.2022.31" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/Y8TS1B" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Government Preferences, Vote Choice, and Strategic Voting in Canada</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alex B. Rivard<br>
+          <span class="journal">Canadian Journal of Political Science</span> (2022)
+        </p>
+        <div class="pub-links">
+          <a href="https://www.cambridge.org/core/journals/canadian-journal-of-political-science-revue-canadienne-de-science-politique/article/abs/government-preferences-vote-choice-and-strategic-voting-in-canada/604A2511B5EA7687908DD4149EE50E97" target="_blank">Open Access</a>
+          <a href="https://www.dropbox.com/s/njzc1xu4e2ymp3u/government-preferences-vote-choice-and-strategic-voting-in-canada.pdf?dl=0" target="_blank">Ungated Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How do Americans want elections to be run during the COVID-19 crisis?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Thad Kousser, Seth Hill, Jennifer Merolla, &amp; Mindy Romero<br>
+          <span class="journal">Research and Politics</span> (2021)
+        </p>
+        <div class="pub-links">
+          <a href="https://journals.sagepub.com/doi/full/10.1177/20531680211012228" target="_blank">Open Access</a>
+          <a href="https://doi.org/10.7910/DVN/3GFZ9L" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How can we increase turnout among Low Propensity Voters?</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Seth Hill, Thad Kousser, Gabe Lenz, &amp; Elizabeth Mitchell Elder<br>
+          <span class="journal">California Journal of Politics and Policy</span> (2020)
+        </p>
+        <div class="pub-links">
+          <a href="https://escholarship.org/uc/item/9mq6n7qx" target="_blank">Open Access</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>America's electorate is increasingly polarized along partisan lines about voting by mail during the COVID-19 crisis</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Seth Hill, Jennifer Merolla, Mindy Romero, &amp; Thad Kousser<br>
+          <span class="journal">Proceedings of the National Academy of Sciences</span> (2020)
+        </p>
+        <span class="pub-badge">Media:
+          <a href="https://www.washingtonpost.com/politics/2020/10/08/more-democrats-than-republicans-plan-vote-by-mail-our-study-finds-that-could-affect-results/" target="_blank" style="color:inherit;">Monkey Cage</a> ·
+          <a href="https://www.scientificamerican.com/article/trump-vs-biden-how-covid-19-will-affect-voting-for-president1/" target="_blank" style="color:inherit;">Scientific American</a> ·
+          <a href="https://ucsdnews.ucsd.edu/pressrelease/covid-opens-a-partisan-gap-on-voting-by-mail" target="_blank" style="color:inherit;">UCSD Press Release</a>
+        </span>
+        <div class="pub-links">
+          <a href="https://www.pnas.org/content/early/2020/09/21/2008023117" target="_blank">Open Access</a>
+          <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FGF0XJA" target="_blank">Replication Archive</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- ── Working Papers ── -->
+    <h2 class="section-heading">Working Papers</h2>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;color:#888;margin-bottom:20px;margin-top:8px;">Primary Elections</h3>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Information and Political Representation: Evidence from the impact of declining local news on primary elections</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">September 2024</p>
+        <span class="pub-badge">Leon Weaver Award, Best Paper — 2021 APSA Meetings</span>
+        <div class="pub-links">
+          <a href="https://maclockhart.com/s/20240901news_decline.pdf" target="_blank">Latest Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Do You Know My Name? How local elites influence primary election outcomes</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">August 2022</p>
+        <div class="pub-links">
+          <a href="https://maclockhart.com/s/mac_lockhart_JMP.pdf" target="_blank">Latest Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Primary Campaigns: Advertising strategies in nomination contests</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">April 2023</p>
+        <div class="pub-links">
+          <a href="https://maclockhart.com/s/advertising_19423.pdf" target="_blank">Latest Version</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;color:#888;margin-bottom:20px;margin-top:8px;">Representation</h3>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Policy Shapes Partisan Identification: How Dobbs made pre-existing abortion policy preferences relevant to partisanship</summary>
+          <p class="pub-abstract">How do policy preferences shape partisan identification? Normally policy attitudes causing partisanship and partisanship causing policy attitudes are observationally equivalent. Using a large-scale multi-year panel (N=50,000) before and after the <em>Dobbs v. Jackson Women's Health Organization</em> decision in 2022 that overturned the <em>Roe v. Wade</em> line of precedents, we show that an exogenous increase in the policy relevance of abortion preferences causes Americans with misaligned abortion preferences to re-align their partisanship to match their abortion attitudes. This effect manifests among the 7% of partisans with misaligned attitudes and the 50% of independents with extreme abortion attitudes. Individuals who consider abortion more important and are more confident in their abortion opinions are particularly likely to change their partisan identifications post-Dobbs.</p>
+        </details>
+        <p class="pub-meta">
+          With Alan Gerber &amp; Gregory Huber<br>
+          July 2024
+        </p>
+        <div class="pub-links">
+          <a href="https://huber.research.yale.edu/materials/116_paper.pdf" target="_blank">Latest Version</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>I'm a Federal Sovereigntist but a Provincial Nationalist: Party Identification in a Multi-Level Westminster Democracy</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alexandre Rivard<br>
+          April 2025
+        </p>
+        <div class="pub-links">
+          <a href="https://osf.io/preprints/osf/at69m_v2" target="_blank">OSF Pre-print</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Can Debates Matter? Evidence from the 2024 Biden-Trump debate</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alan Gerber, Gregory Huber, Douglas Rivers, &amp; Jack Walker<br>
+          Available upon request
+        </p>
+      </li>
+
+    </ul>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;color:#888;margin-bottom:20px;margin-top:8px;">Election Policy</h3>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How Federalism Plus Polarization Create Distrust in American Elections (and Experimental Evidence for a Potential Solution)</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Jen Gaudette, Thad Kousser, Seth Hill, Mindy Romero, &amp; Laura Uribe<br>
+          Invited to Revise and Resubmit at <span class="journal">Election Law Journal</span>
+        </p>
+        <span class="pub-badge">Co-winner, 2024 State Politics and Policy Quarterly Best Paper Award</span>
+        <div class="pub-links">
+          <a href="https://osf.io/x9zg5" target="_blank">OSF Pre-print</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;color:#888;margin-bottom:20px;margin-top:8px;">Other</h3>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>How Stressful are U.S. Presidential Elections? Evidence from a Large-Scale 2024 Panel Study</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alan Gerber, Gregory Huber, &amp; Jack Walker<br>
+          Available upon request
+        </p>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>Assessing the Stability of Popular Attitudinal and Social-Psychology Scales</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Alan Gerber, Gregory Huber, &amp; Jack Walker<br>
+          Available upon request
+        </p>
+      </li>
+
+      <li class="pub-item">
+        <details class="pub-title-details">
+          <summary>The Persuasive Effects of Short Vertical Videos</summary>
+          <!-- Add abstract here -->
+        </details>
+        <p class="pub-meta">
+          With Jennifer Gaudette, Laura Uribe, Cheryl Boudreau, Thad Kousser, Jennifer Merolla, &amp; Mindy Romero
+        </p>
+      </li>
+
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>maclockhart.com</p>
+  </footer>
+
 </body>
-</html> 
+</html>

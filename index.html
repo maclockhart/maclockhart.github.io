@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Days Since A Dance with Dragons</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-        
-        .counter {
-            font-size: 8vw;
-            color: #333;
-            text-align: center;
-        }
-        
-        .label {
-            font-size: 2vw;
-            color: #666;
-            margin-top: 20px;
-        }
-
-        .corner-link {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1vw;
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .corner-link:hover {
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mac Lockhart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div class="counter" id="dayCount"></div>
-        <div class="label">days since A Dance with Dragons was released</div>
+
+  <nav>
+    <a class="site-title" href="index.html">Mac Lockhart</a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="home-layout">
+
+      <div class="headshot">
+        <img src="headshot.jpg" alt="Mac Lockhart">
+      </div>
+
+      <div class="bio">
+        <h1>Mackenzie (Mac) Lockhart</h1>
+
+        <p>I am a researcher studying representation, elections, and public opinion. I received my PhD in Political Science from the University of California San Diego in 2023.</p>
+
+        <p>I am currently a Democratic Innovations Postdoctoral Associate at Yale's Institution for Social and Policy Studies, where I work with Alan Gerber and Greg Huber on the SAY24 presidential election study.</p>
+
+        <p>My research uses surveys and administrative data to analyze voter behavior and legislative representation in American elections. I am particularly interested in how to measure public opinion, how meaningful attitudes are, and what the relationship between policy preferences, candidate positions, and vote choice is.</p>
+
+        <p>My work has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em>, <em>PNAS</em>, and <em>Political Analysis</em>, among others. It has received media coverage in the LA Times, Slate, and Forbes, been cited in amici briefs to the US Supreme Court, and received two APSA section awards.</p>
+
+        <div class="social-links">
+          <a href="https://bsky.app/profile/maclockhart.bsky.social" target="_blank">Bluesky</a>
+          <a href="http://instagram.com/maclockhart" target="_blank">Instagram</a>
+          <a href="http://www.twitter.com/lockhartm" target="_blank">Twitter</a>
+          <a href="mailto:mackenzie.lockhart@gmail.com">Email</a>
+        </div>
+      </div>
+
     </div>
-    <a href="sanderson.html" class="corner-link">Meanwhile, Sanderson...</a>
+  </main>
 
-    <script>
-        function calculateDays() {
-            const releaseDate = new Date('2011-07-12');
-            const today = new Date();
-            const diffTime = Math.abs(today - releaseDate);
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-            document.getElementById('dayCount').textContent = diffDays.toLocaleString();
-        }
+  <footer>
+    <p>maclockhart.com</p>
+  </footer>
 
-        calculateDays();
-        // Update every day
-        setInterval(calculateDays, 86400000);
-    </script>
 </body>
-</html> 
+</html>
